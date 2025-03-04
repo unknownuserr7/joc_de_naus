@@ -1,0 +1,132 @@
+import pygame, sys
+from pygame.locals import *
+
+
+AMPLE = 700
+ALT = 700
+TAMANY = (AMPLE,ALT)
+CYAN = (0,255,255)
+RED = (255,0,0)
+GREEN = (0,255,0)
+BLUE = (0,0,255)
+INDIGO = (75,0,130)
+ORANGE = (255,102,0)
+YELLOW = (255,255,0)
+VIOLET = (127,0,255)
+GREY = (150,150,150)
+MAROON = (128,0,0)
+BLACK = (0,0,0)
+WHITE = (255,255,255)
+OLIVE = (128,128,0)
+PINK = (255,192,203)
+MAGENTA = (255,0,255)
+TAN = (210,180,140)
+TEAL = (0,128,128)
+BLUE2 = (0,0,139)
+RED2 = (139,0,0)
+
+pygame.init()
+pantalla = pygame.display.set_mode(TAMANY)
+pygame.display.set_caption('Spiderman')
+
+contador = 0
+ojos_abiertos = True
+
+while True: # main game loop
+   for event in pygame.event.get():
+       if event.type == QUIT:
+           pygame.quit()
+           sys.exit()
+
+   pantalla.fill(RED2)
+
+   pygame.draw.line(pantalla, WHITE, (350, 350), (700, 350), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 350), (700, 0), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 350), (350, 0), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 350), (0, 0), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 350), (0, 350), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 350), (0, 700), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 350), (350, 700), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 350), (700, 700), 2)
+
+   pygame.draw.line(pantalla, WHITE, (420, 350), (420, 280), 2)
+   pygame.draw.line(pantalla, WHITE, (420, 280), (350, 280), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 280), (280, 280), 2)
+   pygame.draw.line(pantalla, WHITE, (280, 280), (280, 350), 2)
+   pygame.draw.line(pantalla, WHITE, (280, 350), (280, 420), 2)
+   pygame.draw.line(pantalla, WHITE, (280, 420), (350, 420), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 420), (420, 420), 2)
+   pygame.draw.line(pantalla, WHITE, (420, 420), (420, 350), 2)
+
+   pygame.draw.line(pantalla, WHITE, (490, 350), (490, 210), 2)
+   pygame.draw.line(pantalla, WHITE, (490, 210), (350, 210), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 210), (210, 210), 2)
+   pygame.draw.line(pantalla, WHITE, (210, 210), (210, 350), 2)
+   pygame.draw.line(pantalla, WHITE, (210, 350), (210, 490), 2)
+   pygame.draw.line(pantalla, WHITE, (210, 490), (350, 490), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 490), (490, 490), 2)
+   pygame.draw.line(pantalla, WHITE, (490, 490), (490, 350), 2)
+
+   pygame.draw.line(pantalla, WHITE, (560, 350), (560, 140), 2)
+   pygame.draw.line(pantalla, WHITE, (560, 140), (350, 140), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 140), (140, 140), 2)
+   pygame.draw.line(pantalla, WHITE, (140, 140), (140, 350), 2)
+   pygame.draw.line(pantalla, WHITE, (140, 350), (140, 560), 2)
+   pygame.draw.line(pantalla, WHITE, (140, 560), (350, 560), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 560), (560, 560), 2)
+   pygame.draw.line(pantalla, WHITE, (560, 560), (560, 350), 2)
+
+   pygame.draw.line(pantalla, WHITE, (630, 350), (630, 70), 2)
+   pygame.draw.line(pantalla, WHITE, (630, 70), (350, 70), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 70), (70, 70), 2)
+   pygame.draw.line(pantalla, WHITE, (70, 70), (70, 350), 2)
+   pygame.draw.line(pantalla, WHITE, (70, 350), (70, 630), 2)
+   pygame.draw.line(pantalla, WHITE, (70, 630), (350, 630), 2)
+   pygame.draw.line(pantalla, WHITE, (350, 630), (630, 630), 2)
+   pygame.draw.line(pantalla, WHITE, (630, 630), (630, 350), 2)
+
+   pygame.draw.circle(pantalla, RED, (350, 250), 200)
+
+
+   pygame.draw.rect(pantalla, RED, (250, 450, 200, 250))
+
+   pygame.draw.polygon(pantalla, BLUE, [(350, 450), (250, 600), (280, 700), (420, 700), (450, 600)])
+
+   pygame.draw.rect(pantalla, RED, (280, 550, 140, 15))
+   pygame.draw.rect(pantalla, RED, (300, 600, 100, 12))
+   pygame.draw.rect(pantalla, RED, (320, 650, 60, 10))
+
+   pygame.draw.polygon(pantalla, BLACK, [(320, 500), (380, 500), (390, 580), (310, 580)])
+   pygame.draw.polygon(pantalla, BLACK, [(340, 480), (360, 480), (365, 500), (335, 500)])
+   pygame.draw.polygon(pantalla, BLACK, [(310, 500), (280, 470), (300, 500)])
+   pygame.draw.polygon(pantalla, BLACK, [(390, 500), (420, 470), (400, 500)])
+   pygame.draw.polygon(pantalla, BLACK, [(305, 530), (270, 510), (290, 530)])
+   pygame.draw.polygon(pantalla, BLACK, [(395, 530), (430, 510), (410, 530)])
+   pygame.draw.polygon(pantalla, BLACK, [(300, 580), (260, 610), (280, 580)])
+   pygame.draw.polygon(pantalla, BLACK, [(400, 580), (440, 610), (420, 580)])
+   pygame.draw.polygon(pantalla, BLACK, [(295, 600), (250, 630), (270, 600)])
+   pygame.draw.polygon(pantalla, BLACK, [(405, 600), (450, 630), (430, 600)])
+
+   pygame.draw.rect(pantalla, RED, (200, 450, 50, 250))
+   pygame.draw.polygon(pantalla, BLUE, [(200, 550), (250, 550), (250, 700), (200, 650)])
+   pygame.draw.rect(pantalla, RED, (450, 450, 50, 250))
+   pygame.draw.polygon(pantalla, BLUE, [(450, 550), (500, 550), (500, 650), (450, 700)])
+
+   contador += 1
+   if contador >= 2000:
+      ojos_abiertos = not ojos_abiertos
+      contador = 0
+
+   if ojos_abiertos:
+      ojo_izq_blanco = [(220, 100), (320, 200), (320, 350), (220, 300)]
+      ojo_der_blanco = [(480, 100), (380, 200), (380, 350), (480, 300)]
+   else:
+      ojo_izq_blanco = [(200, 180), (340, 220), (340, 280), (200, 250)]
+      ojo_der_blanco = [(500, 180), (360, 220), (360, 280), (500, 250)]
+
+   pygame.draw.polygon(pantalla, WHITE, ojo_izq_blanco)
+   pygame.draw.polygon(pantalla, WHITE, ojo_der_blanco)
+   pygame.draw.polygon(pantalla, BLACK, ojo_izq_blanco, 6)
+   pygame.draw.polygon(pantalla, BLACK, ojo_der_blanco, 6)
+
+   pygame.display.update()
